@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 2, 4, 0.05);
+}
+
+.new-timer-control > * {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.new-timer-control button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.instruction-note {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.timers-list {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos para CADA Timer/Stopwatch */
+.timer-card {
+    flex: 1 1 calc(50% - 20px); /* 2 columnas */
+    min-width: 350px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.timer-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.display {
+    font-size: 3em;
+    font-family: monospace;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.buttons-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* Colores de Botones */
+.start-btn { background-color: #28a745; color: white; }
+.stop-btn { background-color: #ffc107; color: #333; }
+.reset-btn { background-color: #dc3545; color: white; }
+.remove-btn { background-color: #6c757d; color: white; font-size: 0.7em; }
+
+/* Alerta de Countdown */
+.warning-red {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: 3px solid red;
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Al terminar la cuenta regresiva */
+.finished-state {
+    background-color: #6f42c1; /* Púrpura */
+    color: white;
+}

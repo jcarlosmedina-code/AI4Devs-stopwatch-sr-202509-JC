@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timer and Countdown</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Timer App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Timer and Countdown</h1>
-<script src="script.js"></script>
+    <div class="header">
+        <h1>⏰ Multi-Timer App</h1>
+        <p>Añade y gestiona múltiples Cronómetros y Cuentas Regresivas.</p>
+    </div>
+
+    <div class="controls-container">
+        <div class="new-timer-control">
+            <h2>Añadir Nuevo Timer</h2>
+            <input type="text" id="timer-name-input" placeholder="Nombre (ej: 'Apagar horno')" value="Mi Timer">
+            <select id="timer-type-select">
+                <option value="stopwatch">Cronómetro (Ascendente)</option>
+                <option value="countdown">Cuenta Regresiva (Descendente)</option>
+            </select>
+            <input type="text" id="initial-time-input" placeholder="Tiempo inicial (ej: 5m 30s)" disabled>
+            <button id="add-timer-btn">➕ Agregar Timer</button> 
+            <p class="instruction-note">
+                **Cuenta Regresiva:** Introduce un tiempo (ej: 1h, 15m, 20s).
+                <br>**Cronómetro:** El campo de tiempo inicial se ignora.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="timers-list" class="timers-list">
+        </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
